@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- Start Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">LOGO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Home" onclick="toggle()">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about" onclick="toggle()">About Us</a>
+            </li>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="Currentbtn">
+                  All
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#All" onclick="showall()">All</a></li>
+                  <li><a class="dropdown-item" href="#All" onclick="hide23()">GPU</a></li>
+                  <li><a class="dropdown-item" href="#All" onclick="hide13()">CPU</a></li>
+                  <li><a class="dropdown-item" href="#All" onclick="hide12()">MotherBoard</a></li>
+                </ul>
+              </div>
+            <form class="d-flex" role="search">
+                <input class="form-control mx-auto" type="text" placeholder="Search" aria-label="Search" id="searchInput" >
+                <button class="btn btn-outline-success" type="submit" id="searchButton" onclick="filterDivs()">Search</button>
+            </form>
+            <li class="nav-item">
+                <a class="nav-link active" href="#prof" onclick="prof()" ><div><img src="images/prof.png" style="position: relative;  left: 10px; float: right; width: 30px;" id="bprof"></div></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#cart" onclick="cart()"><div><img src="images/cart.png" style="position: relative;  left: 10px; float: right; width: 30px;  "><p id="cartnumber"style="position: relative; float: right; left: 45px;bottom: 7px; color:red">0</p></div></a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- End of Navbar-->
+
+    <!-- Start Home -->
+    <center>
+    <header id = "Home" class = "vh-100 carousel slide" data-bs-ride = "carousel" style = "padding-top: 104px; width: 100%;">
+      <div class = "container h-100 d-flex align-items-center carousel-inner" style="width: 100%;">
+          <div class = "text-center carousel-item active">
+              <h2 class = "text-capitalize text-white">best collection</h2>
+              <h1 class = "text-uppercase py-2 fw-bold text-white">new arrivals</h1>
+              <a href = "#All" class = "btn mt-3 text-uppercase text-white" onclick="toggle1()">shop now</a>
+          </div>
+          <div class = "text-center carousel-item">
+              <h2 class = "text-capitalize text-white">best price & offer</h2>
+              <h1 class = "text-uppercase py-2 fw-bold text-white">new season</h1>
+              <a href = "#All" class = "btn mt-3 text-uppercase text-white" onclick="toggle1()">buy now</a>
+          </div>
+      </div>
+
+      <button class = "carousel-control-prev" type = "button" data-bs-target="#header" data-bs-slide = "prev">
+          <span class = "carousel-control-prev-icon"></span>
+      </button>
+      <button class = "carousel-control-next" type = "button" data-bs-target="#header" data-bs-slide = "next">
+          <span class = "carousel-control-next-icon"></span>
+      </button>
+    </header>
+    </center>
+    <!-- End Home -->
+
+    <!-- Start All-->
+    <div class="All-Container vh-80" id="All">
+      <center>
+      <div class="slider" >
+        <div class="slides">
+
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+
+
+          <div class="slide first">
+            <img src="images/Gigabyte GeForce RTX 4090 Gaming OC 24G.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/GIGABYTE Z690I AORUS ULTRA PLUS DDR4 LGA 1700 Intel Z690 SATA 6Gb_s Mini ITX Intel Motherboard.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/AMD Ryzen 9 7950X3D - Ryzen 9 7000 Series 16-Core 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor - 100-100000908WOF.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/GIGABYTE Z690I AORUS ULTRA PLUS DDR4 LGA 1700 Intel Z690 SATA 6Gb_s Mini ITX Intel Motherboard.png" alt="">
+          </div>
+
+
+          <div class="navigation-auto">
+            <div class="auto-btn-1"></div>
+            <div class="auto-btn-2"></div>
+            <div class="auto-btn-3"></div>
+            <div class="auto-btn-4"></div>
+          </div>
+
+        </div>
+
+          <div class="navigation-mannual">
+            <label for="radio1" class="mannual-btn"></label>
+            <label for="radio2" class="mannual-btn"></label>
+            <label for="radio3" class="mannual-btn"></label>
+            <label for="radio4" class="mannual-btn"></label>
+          </div>
+
+      </center>
+      
+      <!-- Start Items -->
+      <center>
+        <div class="shopping-container">
+        <center>
+          <div class="cards" id="product-list">
+            <div class="category1">
+                <img src="images/Gigabyte GeForce RTX 4090 Gaming OC 24G.png">
+                <h3>Gigabyte GeForce RTX 4090 Gaming OC 24G</h3>
+                <p>₱ 93,965.73</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p1').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category1">
+                <img src="images/XFX Speedster MERC310 AMD Radeon RX 7900XTX Black Gaming Graphics Card with 24GB GDDR6, AMD RDNA 3 RX-79XMERCB9.png">
+                <h3>XFX Speedster MERC310 AMD Radeon RX 7900XTX</h3>
+                <p>₱ 44,565.41</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p2').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category1">
+                <img src="images/Powercolor Hellhound AMD Radeon RX 7900 XT 20GB GDDR6 Graphics Card RX 7900 XT 20G-L_OC.png">
+                <h3>Powercolor Hellhound AMD Radeon RX 7900 XT</h3>
+                <p>₱ 57,000.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p3').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category1">
+                <img src="images/ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti OC Edition Gaming Graphics Card (PCIe 4.0, 12GB GDDR6X, HDMI 2.1a, DisplayPort 1.4a).png">
+                <h3>ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti</h3>
+                <p>₱ 50,162.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p4').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category1" >
+                <img src="images/MSI Gaming GeForce RTX 4070 12GB GDRR6X 192-Bit HDMI_DP Nvlink TORX Fan 4.0 Ada Lovelace Architecture Graphics Card (RTX 4070 Ventus 3X 12G OC).png">
+                <h3>MSI Gaming GeForce RTX 4070 12GB GDRR6X</h3>
+                <p>₱ 49,073.53</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p5').style.display='block';" href = "#All">Quick View</a>
+            </div>
+
+            <div class="category2">
+                <img src="images/Intel Core i5-13400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 20MB Cache, up to 4.6 GHz.png">
+                <h3>Intel Core i5-13400</h3>
+                <p>₱ 13,850.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p6').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category2">
+                <img src="images/AMD Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor.png">
+                <h3>AMD Ryzen 7 7800X3D</h3>
+                <p>₱ 26,995.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p7').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category2">
+                <img src="images/AMD Ryzen 9 7950X3D - Ryzen 9 7000 Series 16-Core 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor - 100-100000908WOF.png">
+                <h3>AMD Ryzen 9 7950X3D </h3>
+                <p>₱ 34,399.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p8').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category2">
+                <img src="images/Intel Core i5-13600K - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - BX8071513600K.png">
+                <h3>Intel Core i5-13600K  </h3>
+                <p>₱ 21,502.87</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p9').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category2">
+                <img src="images/INTEL CORE I3-12100F.png">
+                <h3>INTEL CORE I3-12100F </h3>
+                <p>₱ 5,899.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p10').style.display='block';" href = "#All">Quick View</a>
+            </div>
+
+            <div class="category3">
+                <img src="images/GIGABYTE Z790 AERO G LGA 1700 Intel Z790 ATX Motherboard with DDR5, 5_ 5.0 M.2, PCIe 5.0, USB 3.2 Gen2X2 Type-C, WiFi 6E, Intel 2.5GbE LAN.png">
+                <h3>GIGABYTE Z790 AERO</h3>
+                <p>₱ 23,470</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p11').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category3">
+                <img src="images/Gigabyte Z690 AORUS ELITE AX DDR4 LGA1700 ATX INTEL 12th GEN Motherboard.png">
+                <h3>Gigabyte Z690 AORUS ELITE AX </h3>
+                <p>₱ 15,250.00</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p12').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category3">
+                <img src="images/ASRock Z690 EXTREME WiFi 6E LGA 1700 Intel Z690 SATA 6Gb_s DDR4 ATX Intel Motherboard.png">
+                <h3>ASRock Z690 EXTREME</h3>
+                <p>₱ 19,500</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p13').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category3">
+                <img src="images/GIGABYTE Z690I AORUS ULTRA PLUS DDR4 LGA 1700 Intel Z690 SATA 6Gb_s Mini ITX Intel Motherboard.png">
+                <h3>GIGABYTE Z690I</h3>
+                <p>₱ 17,944.63</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p14').style.display='block';" href = "#All">Quick View</a>
+            </div>
+            <div class="category3">
+                <img src="images/Z690 AORUS TACHYON.png">
+                <h3>Z690 AORUS TACHYON</h3>
+                <p>₱ 26,237.99</p>
+                <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p15').style.display='block';" href = "#All">Quick View</a>
+            </div>
+
+          </div>
+        </center>
+        </div>
+        </center>
+        <!-- End Items -->
+    </div>
+    <!-- End All-->
+
+    <!-- Start Preview -->
+        <div class="preview" id="p1">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p1')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/Gigabyte GeForce RTX 4090 Gaming OC 24G.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>Gigabyte GeForce RTX 4090 Gaming OC 24G</h3>
+            <h5>NVIDIA Ada Lovelace Streaming Multiprocessors: Up to 2x performance and power efficiency..</h5>
+            <p>₱ 93,965.73</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div1')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p2">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p2')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/XFX Speedster MERC310 AMD Radeon RX 7900XTX Black Gaming Graphics Card with 24GB GDDR6, AMD RDNA 3 RX-79XMERCB9.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>XFX Speedster MERC310 AMD Radeon RX 7900XTX </h3>
+            <h5>Chipset: AMD RX 7900 XTX</h5>
+            <p>₱ 44,565.41</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div2')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p3">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p3')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/Powercolor Hellhound AMD Radeon RX 7900 XT 20GB GDDR6 Graphics Card RX 7900 XT 20G-L_OC.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>Powercolor Hellhound AMD Radeon RX 7900 XT </h3>
+            <h5>Graphics Engine RX 7900 XT 20G-L/OC</h5>
+            <p>₱ 57,000.00</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div3')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p4">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p4')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti OC Edition Gaming Graphics Card (PCIe 4.0, 12GB GDDR6X, HDMI 2.1a, DisplayPort 1.4a).png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti</h3>
+            <h5>Powered by NVIDIA DLSS3, ultra-efficient Ada Lovelace arch, and full ray tracing</h5>
+            <p>₱ 50,162.000</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div4')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p5">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p5')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/MSI Gaming GeForce RTX 4070 12GB GDRR6X 192-Bit HDMI_DP Nvlink TORX Fan 4.0 Ada Lovelace Architecture Graphics Card (RTX 4070 Ventus 3X 12G OC).png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>MSI Gaming GeForce RTX 4070 12GB GDRR6X</h3>
+            <h5>Chipset: GeForce RTX 4070</h5>
+            <p>₱ 49,073.53</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div5')">Add to Cart</a>
+            </center> 
+        </div>
+
+
+        <div class="preview" id="p6">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p6')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/Intel Core i5-13400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 20MB Cache, up to 4.6 GHz.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>Intel Core i5-13400 </h3>
+            <h5>10 cores (6 P-cores + 4 E-cores) and 16 threads. Integrated Intel UHD Graphics 770 included</h5>
+            <p>₱ 13,850.00</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div6')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p7">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p7')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/AMD Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>AMD Ryzen 7 7800X3D </h3>
+            <h5>THE ULTIMATE GAMING PROCESSOR</h5>
+            <p>₱ 26,995.00</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div7')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p8">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p8')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/AMD Ryzen 9 7950X3D - Ryzen 9 7000 Series 16-Core 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor - 100-100000908WOF.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>AMD Ryzen 9 7950X3D </h3>
+            <h5>5nm 120W</h5>
+            <p>₱ 34,399.00</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div8')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p9">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p9')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/Intel Core i5-13600K - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - BX8071513600K.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>Intel Core i5-13600K </h3>
+            <h5>Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor </h5>
+            <p>₱ 21,502.87</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div9')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p10">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p10')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/INTEL CORE I3-12100F.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>INTEL CORE I3-12100F </h3>
+            <h5>Intel Core i3-12100F Desktop Processor 4 (4P-0E) Cores Up to 4.3 GHz Turbo Frequency LGA1700 600 Series Chipset 58W Processor Base Power</h5>
+            <p>₱ 5,899.00</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div10')">Add to Cart</a>
+            </center> 
+        </div>
+
+
+        <div class="preview" id="p11">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p11')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/GIGABYTE Z790 AERO G LGA 1700 Intel Z790 ATX Motherboard with DDR5, 5_ 5.0 M.2, PCIe 5.0, USB 3.2 Gen2X2 Type-C, WiFi 6E, Intel 2.5GbE LAN.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>GIGABYTE Z790 AERO</h3>
+            <h5>LIntel LGA 1700 Socket: Supports 13th and 12th Gen Intel Core Series Processors.</h5>
+            <p>₱ 23,470</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div11')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p12">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p12')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/Gigabyte Z690 AORUS ELITE AX DDR4 LGA1700 ATX INTEL 12th GEN Motherboard.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>Gigabyte Z690 AORUS ELITE AX </h3>
+            <h5>Intel LGA 1700 Socket: Supports 12th Gen Intel Core Series Processors</h5>
+            <p>₱ 15,250.00</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div12')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p13">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p13')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/ASRock Z690 EXTREME WiFi 6E LGA 1700 Intel Z690 SATA 6Gb_s DDR4 ATX Intel Motherboard.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>ASRock Z690 EXTREME</h3>
+            <h5>Supports 13th / 12th Gen Intel Core Processors, Intel Pentium Gold, Celeron Processors</h5>
+            <p>₱19,500</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div13')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p14">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p14')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/GIGABYTE Z690I AORUS ULTRA PLUS DDR4 LGA 1700 Intel Z690 SATA 6Gb_s Mini ITX Intel Motherboard.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>GIGABYTE Z690I </h3>
+            <h5>Celeron / Core i3 / Core i5 / Core i7 / Core i9 / Intel Core 12th Gen (LGA 1700) / Intel Core 13th Gen (LGA 1700) / Pentium Gold</h5>
+            <p>₱ 17,944.63</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div14')">Add to Cart</a>
+            </center> 
+        </div>
+
+        <div class="preview" id="p15">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p15')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/Z690 AORUS TACHYON.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h3>Z690 AORUS TACHYON</h3>
+            <h5>Intel LGA 1700 Socket: Supports 12th Gen Intel Core Series Processors</h5>
+            <p>₱ 26,237.99</p>
+            <a class = "btn mt-3 text-uppercase text-white" onclick="addtocart('div15')">Add to Cart</a>
+            </center> 
+        </div>
+
+    <!-- End Preview -->
+
+    <!-- Start ShoppingCart -->
+    <div class="cart vh-75" id="cart">
+        <center>
+        <h1 style="margin-top: 20px;">Shopping Cart</h1>
+    </center>
+        <center>
+            <div class="shopping-container">
+            <center>
+              <div class="cards1" id="product-list">
+                <div class="category4" id="div1">
+                    <img src="images/Gigabyte GeForce RTX 4090 Gaming OC 24G.png">
+                    <h3>Gigabyte GeForce RTX 4090 Gaming OC 24G</h3>
+                    <p>₱ 93,965.73</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div1')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div2">
+                    <img src="images/XFX Speedster MERC310 AMD Radeon RX 7900XTX Black Gaming Graphics Card with 24GB GDDR6, AMD RDNA 3 RX-79XMERCB9.png">
+                    <h3>XFX Speedster MERC310 AMD Radeon RX 7900XTX </h3>
+                    <p>₱ 44,565.41</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div2')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div3">
+                    <img src="images/Powercolor Hellhound AMD Radeon RX 7900 XT 20GB GDDR6 Graphics Card RX 7900 XT 20G-L_OC.png">
+                    <h3>Powercolor Hellhound AMD Radeon RX 7900 XT </h3>
+                    <p>₱ 57,000.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div3')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div4">
+                    <img src="images/ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti OC Edition Gaming Graphics Card (PCIe 4.0, 12GB GDDR6X, HDMI 2.1a, DisplayPort 1.4a).png">
+                    <h3>ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti </h3>
+                    <p>₱50,162.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div4')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div5">
+                    <img src="images/MSI Gaming GeForce RTX 4070 12GB GDRR6X 192-Bit HDMI_DP Nvlink TORX Fan 4.0 Ada Lovelace Architecture Graphics Card (RTX 4070 Ventus 3X 12G OC).png">
+                    <h3>MSI Gaming GeForce RTX 4070 12GB GDRR6X</h3>
+                    <p>₱ 49,073.53</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div5')" href = "#cart">Remove</a>
+                </div>
+    
+                <div class="category4" id="div6">
+                    <img src="images/Intel Core i5-13400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 20MB Cache, up to 4.6 GHz.png">
+                    <h3>Intel Core i5-13400</h3>
+                    <p>₱ 13,850.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div6')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div7">
+                    <img src="images/AMD Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor.png">
+                    <h3>AMD Ryzen 7 7800X3D</h3>
+                    <p>₱ 26,995.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div7')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div8">
+                    <img src="images/AMD Ryzen 9 7950X3D - Ryzen 9 7000 Series 16-Core 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor - 100-100000908WOF.png">
+                    <h3>AMD Ryzen 9 7950X3D </h3>
+                    <p>₱ 34,399.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div8')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div9">
+                    <img src="images/Intel Core i5-13600K - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - BX8071513600K.png">
+                    <h3>Intel Core i5-13600K  </h3>
+                    <p>₱ 21,502.87</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div9')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div10">
+                    <img src="images/INTEL CORE I3-12100F.png">
+                    <h3>INTEL CORE I3-12100F </h3>
+                    <p>₱ 5,899.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div10')" href = "#cart">Remove</a>
+                </div>
+    
+                <div class="category4" id="div11">
+                    <img src="images/GIGABYTE Z790 AERO G LGA 1700 Intel Z790 ATX Motherboard with DDR5, 5_ 5.0 M.2, PCIe 5.0, USB 3.2 Gen2X2 Type-C, WiFi 6E, Intel 2.5GbE LAN.png">
+                    <h3>GIGABYTE Z790 AERO</h3>
+                    <p>₱ 23,470</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div11')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div12">
+                    <img src="images/Gigabyte Z690 AORUS ELITE AX DDR4 LGA1700 ATX INTEL 12th GEN Motherboard.png">
+                    <h3>Gigabyte Z690 AORUS ELITE AX </h3>
+                    <p>₱ 15,250.00</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div12')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div13">
+                    <img src="images/ASRock Z690 EXTREME WiFi 6E LGA 1700 Intel Z690 SATA 6Gb_s DDR4 ATX Intel Motherboard.png">
+                    <h3>ASRock Z690 EXTREME</h3>
+                    <p>₱19,500</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div13')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div14">
+                    <img src="images/GIGABYTE Z690I AORUS ULTRA PLUS DDR4 LGA 1700 Intel Z690 SATA 6Gb_s Mini ITX Intel Motherboard.png">
+                    <h3>GIGABYTE Z690I</h3>
+                    <p>₱17,944.63</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div14')" href = "#cart">Remove</a>
+                </div>
+                <div class="category4" id="div15">
+                    <img src="images/Z690 AORUS TACHYON.png">
+                    <h3>Z690 AORUS TACHYON</h3>
+                    <p>₱ 26,237.99</p>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="removetocart('div15')" href = "#cart">Remove</a>
+                </div>
+    
+              </div>
+            </center>
+            </div>
+        </center>
+        <hr>
+        <center>
+        <div class="total">
+            <h3 id="price">Total Amount: 00</h3>
+        </div>
+        <a class = "btn mt-3 text-uppercase text-Red" onclick="checkout()">Check Out</a>
+        </center>
+        <hr>
+    </div>
+    <!-- End ShoppingCart -->
+
+    <!-- Start Profile -->
+    <div class="profile vh-100" id="prof">
+        <center>
+            <div class="shopping-container">
+            <center>
+              <div class="cards" id="product-list" style="margin-top: 10%;">
+                <div class="category1">
+                    <img src="images/prof.png">
+                    <h3>Log In</h3>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p16').style.display= 'block'" href = "#prof">Log In</a>
+                    <!-- <a class = "btn mt-3 text-uppercase text-white" onclick="logout1()" href = "#prof" id="logout">Log Out</a> -->
+                </div>
+                <div class="category1">
+                    <img src="images/reg.png">
+                    <h3>Register</h3>
+                    <a class = "btn mt-3 text-uppercase text-white" onclick="document.getElementById('p17').style.display = 'block'" href = "#prof">Register</a>
+                </div>
+              </div>
+            </center>
+            </div>
+        </center>
+
+
+        <div class="preview" id="p16" style="height: 80%; margin-top: -10%;">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p16')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/prof.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h4>Enter Email:</h4>
+            <input type="text" class="form-control mx-auto" type="text" placeholder="Email" aria-label="Search" id="logmail">
+            <h4>Enter Password:</h4>
+            <input type="text" class="form-control mx-auto" type="text" placeholder="Password" aria-label="Search" id="logpass">
+            <a class = "btn mt-3 text-uppercase text-white" onclick="checkdata()">Submit</a>
+            </center> 
+        </div>
+        <div class="preview" id="p17" style="height: 80%; margin-top: -10%;">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p17')" href = "#All"><img src="images/x.jpg"></a>
+            <img src="images/reg.png" style="width:30%; height: auto; margin-bottom: 5px;">
+            <h4>Enter Email:</h4>
+            <input type="text" class="form-control mx-auto" type="text" placeholder="Email" aria-label="Search" id="email">
+            <h4>Enter Password:</h4>
+            <input type="text" class="form-control mx-auto" type="text" placeholder="Password" aria-label="Search" id="pass">
+            <h4>Enter Address:</h4>
+            <input type="text" class="form-control mx-auto" type="text" placeholder="Address" aria-label="Search" id="address">
+            <h4>Enter Phone Number:</h4>
+            <input type="text" class="form-control mx-auto" type="text" placeholder="Number" aria-label="Search" id="number">
+            <a class = "btn mt-3 text-uppercase text-white" onclick="insertdata()">Submit</a>
+            </center> 
+        </div>
+    </div>
+    <!-- End Profile -->
+
+    <!-- Start Receipt -->
+    <div class="receipt">
+        <div class="preview" id="p18" style="height: 80%; margin-top: -10%; border-color: black; border-width: 2px;">
+            <center> 
+            <a href="#"class="exit" onclick="exit('p18')" href = "#All"><img src="images/x.jpg"></a>
+            <h2>Receipt</h2>
+            <hr style="color: black; height: 4px;">
+            <!-- <div id="receiptlist"></div> -->
+            <div class="ritem">
+            <div class="ritem1" id="r1">Gigabyte GeForce RTX 4090 Gaming OC 24G --- ₱ 93,965.73</div>
+            <div class="ritem1" id="r2">XFX Speedster MERC310 AMD Radeon RX 7900XTX --- ₱ 44,565.41</div>
+            <div class="ritem1" id="r3">Powercolor Hellhound AMD Radeon RX 7900 XT --- ₱ 57,000.00</div>
+            <div class="ritem1" id="r4">ASUS TUF Gaming NVIDIA GeForce RTX™ 4070 Ti --- ₱ 50,162.000</div>
+            <div class="ritem1" id="r5">MSI Gaming GeForce RTX 4070 12GB GDRR6X --- ₱ 49,073.53</div>
+            <div class="ritem1" id="r6">Intel Core i5-13400 --- ₱ 13,850.00</div>
+            <div class="ritem1" id="r7">AMD Ryzen 7 7800X3D --- ₱ 26,995.00</div>
+            <div class="ritem1" id="r8">AMD Ryzen 9 7950X3D --- ₱ 34,399.00</div>
+            <div class="ritem1" id="r9">Intel Core i5-13600K --- ₱ 21,502.87</div>
+            <div class="ritem1" id="r10">INTEL CORE I3-12100F --- ₱ 5,899.00</div>
+            <div class="ritem1" id="r11">GIGABYTE Z790 AERO --- ₱ 23,470</div>
+            <div class="ritem1" id="r12">Gigabyte Z690 AORUS ELITE AX --- ₱ 15,250.00</div>
+            <div class="ritem1" id="r13">ASRock Z690 EXTREME --- ₱19,500</div>
+            <div class="ritem1" id="r14">GIGABYTE Z690I --- ₱ 17,944.63</div>
+            <div class="ritem1" id="r15">Z690 AORUS TACHYON --- ₱ 26,237.99</div>
+            </div>
+
+            <hr style="color: black; height: 4px;">
+            <h4 id="price1">Price: </h4>
+            <hr style="color: black; height: 4px;">
+            <a class = "btn mt-3 text-uppercase text-white" onclick="purchase()">Check Out</a>
+            </center> 
+        </div>
+    </div>
+    <!-- End Receipt -->
+
+
+    <!-- Start About -->
+    <main id="aboutnot">
+        <div class="hero-image" id="about">
+            <div class="hero-text">
+              <p>If you do build a great experience, customers tell each other about that. Word of mouth is very powerful.</p>
+            </div>
+          </div>
+          <div style="padding: 10%;">
+            <h1 style="text-align: center;">Who we are</h1><br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore eius modi voluptate ad ut voluptatum, aliquam vel quaerat fuga quae voluptatem illo explicabo debitis et qui quam, ea deleniti eveniet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam debitis aperiam voluptatum nostrum ipsa quam placeat ipsum tempore qui dignissimos. Minima ipsa nostrum numquam quaerat blanditiis, aliquam iste assumenda asperiores?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima eos ad nesciunt voluptas aliquid ullam error iste quae, libero unde fugit assumenda pariatur! Nemo laboriosam aliquam corrupti vero molestias quia.
+            </p>
+          </div>
+            <div class="containerL">
+                <div class="txtL">
+                    <p>We unlock value for everyone, everywhere.</p>
+                    <!-- <p>Sunny Skies Beach Resort is located in the center of El Nido, one of the most top rated island destinations in Asia. An unmissable stay for your next holiday in paradise! The resort is located in El Nido Town Center roughly 20 minutes from Lio Airport and just meters from the beach, overlooking the World famous bay and the towering islands in the distance. El Nido is located in the Northern part of Palawan and just a short 1 hour flight from Manila. It is known for its stunning beaches, crystal clear waters, pristine and unspoilt island life and towering limestone cliffs</p> -->
+                </div>
+                <div class="imgL">
+                    <!-- <img  src="https://www.telegraph.co.uk/content/dam/Travel/2018/September/boracay-GettyImages-657020958.jpg"> -->
+                </div>
+            </div>
+            <div style="padding: 10%;">
+                <h1 style="text-align: center;">What do we do?</h1><br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore eius modi voluptate ad ut voluptatum, aliquam vel quaerat fuga quae voluptatem illo explicabo debitis et qui quam, ea deleniti eveniet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam debitis aperiam voluptatum nostrum ipsa quam placeat ipsum tempore qui dignissimos. Minima ipsa nostrum numquam quaerat blanditiis, aliquam iste assumenda asperiores?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima eos ad nesciunt voluptas aliquid ullam error iste quae, libero unde fugit assumenda pariatur! Nemo laboriosam aliquam corrupti vero molestias quia.
+                </p>
+              </div>
+
+              <div class="containerLL">
+                <div class="imgLL">
+                    <!-- <img  src="https://www.telegraph.co.uk/content/dam/Travel/2018/September/boracay-GettyImages-657020958.jpg"> -->
+                </div>
+                <div class="txtLL">
+                    <h1>Our Business</h1><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum asperiores impedit animi, consequatur eligendi, repellendus pariatur architecto reiciendis voluptatem aspernatur voluptate ipsa quos obcaecati. Illum repudiandae optio eveniet dignissimos quasi?</p>
+                </div>
+                
+            </div>
+    </main>
+    <!-- End About -->
+
+    <!-- Start Banner -->
+    <!-- <div class="Banner-container">
+      <center>
+      <div class="Banner">
+        <img src="images/Sale banner.png">
+      </div>
+    </center>
+    </div>
+    <div class="Banner-container">
+      <center>
+      <div class="Banner" style="margin-top: 70px;">
+        <img src="images/Sale banner.png">
+      </div>
+    </center>
+    </div> -->
+    <!-- End Banner -->
+
+    <!-- Start Footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">Attire</a>
+                    <p class = "text-white text-muted mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia quisquam veniam odit cupiditate, ullam aut voluptas velit dolor ipsam?</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Links</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "#Home" class = "text-white text-decoration-none text-muted" onclick="toggle()">
+                                <i class = "fas fa-chevron-right me-1"></i> Home
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#All" class = "text-white text-decoration-none text-muted" onclick="showall()">
+                                <i class = "fas fa-chevron-right me-1"></i> Store
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#about" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Contact Us</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Albert Street, New York, AS 756, United States of America
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            attire.support@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            +9786 6776 236
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  </body>
+</html>
